@@ -13,11 +13,6 @@ public class Window {
     private String title;
     private long glfwWindow;
 
-    public float windowBackgroundRed = (float) 255;
-    public float windowBackgroundGreen = (float) 170;
-    public float windowBackgroundBlue = (float) 0;
-    public float windowBackgroundAlpha = (float) 255;
-
     private static Window window = null;
 
     private Window() {
@@ -81,7 +76,7 @@ public class Window {
             // poll events
             glfwPollEvents();
 
-            glClearColor(windowBackgroundRed / 255, windowBackgroundGreen / 255, windowBackgroundBlue / 255, windowBackgroundAlpha / 255);
+            glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
             glClear(GL_COLOR_BUFFER_BIT);
 
             glfwSwapBuffers(glfwWindow);
